@@ -23,4 +23,20 @@ public class RandomMood implements MoodService {
         ml.setMoodList(Arrays.asList(m1,m2,m3));
         return ml.getRandomMood();       
     }
+	
+	public String getExplanation(String mood) {
+		String reason = "";
+	     switch(mood) {
+	     case "happy": reason = "He just had a redbull and can run more apps";
+	     				break;
+
+	     case "sad": reason = "Apache just left him";
+	     				break;
+
+	     case "nuetral": reason = "He has remained the same for years, nothing new is happening in his life";
+	     				break;
+	     				default: reason ="I dont know what mood is this";
+	     }
+	     return reason;
+	}
 }

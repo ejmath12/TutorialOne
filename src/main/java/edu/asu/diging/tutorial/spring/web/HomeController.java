@@ -19,24 +19,7 @@ public class HomeController {
     @RequestMapping(value = "/")
     public String home(ModelMap map) {
         map.addAttribute("mood", service.getCurrentMood());
-        return "index";
+        return "home";
     }
     
-    @RequestMapping(value = "/why")
-    public String someMethod(@RequestParam("mood") String mood, ModelMap map) {
-     String reason = "";
-     switch(mood) {
-     case "happy": reason = "He just had a redbull and can run more apps";
-     				break;
-
-     case "sad": reason = "Apache just left him";
-     				break;
-
-     case "nuetral": reason = "He has remained the same for years, nothing new is happening in his life";
-     				break;
-     				default: reason ="I dont know what mood is this";
-     }
-     map.addAttribute("result", reason);
-     return "whyPage";
-    } 
 }

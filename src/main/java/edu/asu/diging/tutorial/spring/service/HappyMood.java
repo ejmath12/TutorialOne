@@ -16,4 +16,8 @@ public class HappyMood implements MoodService{
     public Mood getCurrentMood() {
         return new Mood("happy");
     }
+    
+    public String getExplanation(String mood){
+    	return "He just had a redbull and can run more apps";
+    }
 }

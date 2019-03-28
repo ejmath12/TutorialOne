@@ -17,5 +17,6 @@ public interface MoodService {
   
 	public Mood getCurrentMood();
 	
+	public String getExplanation(String mood);
 	
 }
